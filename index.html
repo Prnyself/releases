@@ -63,7 +63,9 @@
                 if (this.init) {
                     return this.releases
                 }
-                fetch('./data.json')
+                fetch('https://github.com/qingstor/releases/blob/master/data.json', {
+                    mode: 'no-cors',
+                })
                     .then(res => res.json())
                     .then(data => {
                         let id = 1

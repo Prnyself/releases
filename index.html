@@ -41,7 +41,7 @@
                             {{item.name}}
                         </a>
                         <div v-if="!item.url">
-                            {{item.name}}
+                            <a href="#{ item.url }">{{item.name}}</a>
                         </div>
                     </template>
                 </v-treeview>

@@ -34,9 +34,9 @@
                         :items="items"
                         :search="search"
                         :filter="filter"
-                        :open.sync="open"
                         :open="openNode"
                 >
+                <!-- :open.sync="open" -->
                     <template v-slot:label="{ item }">
                         <a v-if="item.url" v-bind:href="item.url">
                             {{item.name}}
@@ -110,7 +110,7 @@
             },
             openNode() {
                 const hashName = window.location.hash
-                return hashName.replace('#', '')
+                return [hashName.replace('#', '')]
             },
         },
     })
